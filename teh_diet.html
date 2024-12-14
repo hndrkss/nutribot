@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekomendasi Teh Diet</title>
+    <style>
+      :root {
+        --primary-color: #27ae60;
+        --secondary-color: #27ae60;
+        --background-color: #f1f8e9;
+        --text-color: #333;
+        --card-bg-color: #fff;
+        --accent-color: #27ae60;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .back-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .teh-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .teh-card {
+        background-color: var(--card-bg-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .teh-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .teh-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .teh-content {
+        padding: 20px;
+      }
+
+      .teh-title {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .teh-description {
+        font-size: 1rem;
+        color: var(--text-color);
+        margin-bottom: 15px;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .teh-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <button class="back-btn" onclick="history.back()">←</button>
+        <h1>Rekomendasi Teh Diet</h1>
+        <div></div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="teh-grid">
+        <div class="teh-card">
+          <img
+            src="https://images.tokopedia.net/img/cache/900/VqbcmM/2022/8/6/c42e16c5-07a6-4533-b4de-3d1dbb839319.jpg"
+            alt="Herbasen Detox & Slimming Green Tea Premium"
+            class="teh-image"
+          />
+          <div class="teh-content">
+            <h2 class="teh-title">
+              Herbasen Detox & Slimming Green Tea Premium
+            </h2>
+            <p class="teh-description">
+              Herbasen Detox & Slimming Green Tea Premium adalah teh hijau yang
+              membantu meningkatkan metabolisme, membakar lemak, dan mendukung
+              proses detoksifikasi tubuh. Dengan kandungan antioksidan tinggi,
+              teh ini memperbaiki pencernaan, meningkatkan energi, dan
+              memperlambat penuaan. Selain itu, juga bermanfaat untuk kesehatan
+              jantung dan membantu menjaga berat badan ideal.
+            </p>
+          </div>
+        </div>
+
+        <div class="teh-card">
+          <img
+            src="https://images.tokopedia.net/img/cache/900/VqbcmM/2024/2/1/17487703-e901-4a0b-811b-3e9d4f23a74d.jpg"
+            alt="Green Tea Pome Herbalif"
+            class="teh-image"
+          />
+          <div class="teh-content">
+            <h2 class="teh-title">Green Tea Pome Herbalif</h2>
+            <p class="teh-description">
+              Green Tea Pome Herbalife adalah teh pelangsing yang menggabungkan
+              ekstrak teh hijau dan delima, yang dikenal kaya akan antioksidan.
+              Teh ini membantu mempercepat metabolisme tubuh, membakar lemak,
+              dan meningkatkan energi. Selain itu, kandungan antioksidan dalam
+              teh ini juga mendukung kesehatan jantung, meningkatkan pencernaan,
+              dan membantu detoksifikasi tubuh secara alami, menjadikannya
+              pilihan yang baik untuk program penurunan berat badan dan gaya
+              hidup sehat.
+            </p>
+          </div>
+        </div>
+
+        <div class="teh-card">
+          <img
+            src="https://down-id.img.susercontent.com/file/aa924b9cd12cb88c5b01b1432a3a0c06@resize_w450_nl.webp"
+            alt="Dietqyu Teh Herbal"
+            class="teh-image"
+          />
+          <div class="teh-content">
+            <h2 class="teh-title">Dietqyu Teh Herbal</h2>
+            <p class="teh-description">
+              Benefit Slim Tea DIETQYU adalah teh diet yang efektif membantu
+              menurunkan berat badan 1-5kg dalam 15 hari. Teh ini bekerja dengan
+              cara menghilangkan lemak membandel di tubuh, termasuk di area
+              lengan, perut, dan paha, serta membersihkan dan mendetoks saluran
+              pencernaan. Dengan kandungan yang mampu menyerap lemak dan
+              kolesterol dari makanan yang dikonsumsi, teh ini mempercepat
+              metabolisme, memperlancar pembuangan ampas makanan, dan mengurangi
+              nafsu makan. Selain itu, Benefit Slim Tea juga melangsingkan
+              tubuh, mengecilkan perut, dan membuang racun dalam tubuh berkat
+              kandungan antioksidan tingginya, serta membantu starter
+              metabolisme dan sekresi kotoran tubuh secara alami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>@nutribot_innovators 2024. <a href="#">Hubungi Kami</a></p>
+    </footer>
+  </body>
+</html>

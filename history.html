@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Kesehatan</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      /* Reset Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(120deg, #e6f7e9, #2ecc71);
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Background Animation */
+      .background-ai {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        animation: moveBg 20s linear infinite;
+      }
+
+      @keyframes moveBg {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        color: rgb(0, 175, 96);
+        opacity: 0.9;
+        z-index: 10;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .navbar .logo img {
+        width: 70px;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: rgb(0, 155, 85);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+        color: #45a247;
+      }
+      /* Features Section */
+      .features {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 50px 20px;
+        margin: 32px auto;
+        max-width: 70%;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #27ae60;
+        margin-bottom: 30px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Chart Container */
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Add these new styles to your existing CSS */
+      .user-info-card {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 32px;
+      }
+
+      .user-info-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #e6f7e9;
+      }
+
+      .user-avatar {
+        width: 64px;
+        height: 64px;
+        background-color: #e6f7e9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #27ae60;
+        font-weight: bold;
+      }
+
+      .user-name {
+        flex-grow: 1;
+      }
+
+      .user-name h3 {
+        color: #27ae60;
+        font-size: 24px;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .user-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .detail-item {
+        background: #f8fdf9;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid #e6f7e9;
+      }
+
+      .detail-label {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 4px;
+      }
+
+      .detail-value {
+        font-size: 18px;
+        color: #27ae60;
+        font-weight: 600;
+      }
+
+      .info {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .info h3 {
+        color: #27ae60;
+        margin-bottom: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-ai"></div>
+
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./asst/logo.png" alt="Chatbot Illustration" />
+          <h1>nutribot</h1>
+        </div>
+        <ul>
+          <li><a href="CAPSTONE.html">Home</a></li>
+          <li><a href="#">Deteksi Gula Darah</a></li>
+          <li><a href="history.html">Riwayat</a></li>
+          <li><a href="produk.html">Produk</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="features">
+      <h2>Riwayat Deteksi Gula Darah</h2>
+      <div class="container">
+        <div class="user-info-card">
+          <div class="user-info-header">
+            <div class="user-avatar">FR</div>
+            <div class="user-name">
+              <h3>Febrina Rosaadah</h3>
+            </div>
+          </div>
+          <div class="user-details">
+            <div class="detail-item">
+              <div class="detail-label">Umur</div>
+              <div class="detail-value">20 tahun</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Tinggi Badan</div>
+              <div class="detail-value">160 cm</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Berat Badan</div>
+              <div class="detail-value">58 kg</div>
+            </div>
+          </div>
+        </div>
+        <canvas id="bloodSugarChart" width="400" height="200"></canvas>
+      </div>
+    </section>
+
+    <footer>
+      <p>@nutribot_innovators 2024. <a href="#">Hubungi Kami</a></p>
+    </footer>
+
+    <script>
+      // Data gula darah untuk 30 hari
+      const labels = Array.from({ length: 30 }, (_, i) => `Hari ${i + 1}`);
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Kadar Gula Darah (mg/dL)',
+            data: [
+              110, 120, 115, 130, 140, 135, 125, 120, 118, 122, 117, 128, 136,
+              144, 130, 128, 125, 120, 115, 110, 112, 114, 116, 119, 121, 123,
+              125, 127, 129, 131,
+            ],
+            backgroundColor: 'rgba(46, 204, 113, 0.8)',
+            borderColor: 'rgba(39, 174, 96, 1)',
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      const config = {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Histori Gula Darah Selama 30 Hari',
+              color: '#27ae60',
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Kadar Gula Darah (mg/dL)',
+                color: '#27ae60',
+              },
+              ticks: {
+                color: '#333',
+              },
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Hari',
+                color: '#27ae60',
+              },
+              ticks: {
+                color: '#333',
+              },
+            },
+          },
+        },
+      };
+
+      // Render chart
+      const ctx = document.getElementById('bloodSugarChart').getContext('2d');
+      new Chart(ctx, config);
+    </script>
+  </body>
+</html>

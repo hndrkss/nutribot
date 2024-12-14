@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Rekomendasi Kesehatan - Nutribot Innovators</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(120deg, #e6f7e9, #2ecc71);
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        color: rgb(0, 175, 96);
+        opacity: 0.9;
+        z-index: 10;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .navbar h1 {
+        font-size: 32px;
+      }
+
+      .navbar .logo img {
+        width: 70px;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #27ae60;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+        color: #219653;
+      }
+
+      /* Product section styles */
+      .produk {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 50px;
+        margin: 40px auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+      }
+
+      .produk h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #27ae60;
+        max-width: 500px;
+        line-height: 44px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 60px;
+      }
+
+      .produk-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .produk-card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .produk-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .produk-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .produk-content {
+        padding: 20px;
+      }
+
+      .produk-card h3 {
+        font-size: 1.3rem;
+        color: #27ae60;
+        margin-bottom: 10px;
+      }
+
+      .produk-card p {
+        color: #666;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      .produk-card .btn {
+        display: block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        background-color: #27ae60;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .produk-card .btn:hover {
+        background-color: #219653;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar ul {
+          margin-top: 20px;
+        }
+
+        .navbar li {
+          margin: 10px 0;
+        }
+
+        .produk {
+          margin: 20px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./asst/logo.png" alt="Chatbot Illustration" />
+          <h1>nutribot</h1>
+        </div>
+        <ul>
+          <li><a href="CAPSTONE.html">Home</a></li>
+          <li><a href="#">Deteksi Gula Darah</a></li>
+          <li><a href="history.html">Riwayat</a></li>
+          <li><a href="produk.html">Produk</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="produk">
+      <h2>Produk Rekomendasi untuk Kesehatan Obesitas</h2>
+      <div class="produk-grid">
+        <div class="produk-card">
+          <img
+            src="https://down-id.img.susercontent.com/file/id-11134207-7r98r-lt3l72cnth3hce@resize_w450_nl.webp"
+            alt="Produk Pembakar Lemak A"
+          />
+          <div class="produk-content">
+            <h3>Produk Pembakar Lemak</h3>
+            <p>
+              Produk pembakar lemak yang dapat membantu mengurangi lemak tubuh
+              dengan cara alami. Cocok untuk membantu dalam program diet.
+            </p>
+            <a href="produk_pembakar_lemak.html" class="btn"
+              >Pelajari Lebih Lanjut</a
+            >
+          </div>
+        </div>
+        <div class="produk-card">
+          <img
+            src="https://media.amway.id/sys-master/images/h31/h72/9471072403486/6_110170IN_Bcomplex_Product_588Wx588H"
+            alt="Suplementasi Nutrisi B"
+          />
+          <div class="produk-content">
+            <h3>Suplementasi Nutrisi</h3>
+            <p>
+              Suplementasi yang dirancang khusus untuk mendukung metabolisme
+              tubuh dan meningkatkan energi. Dapat membantu dalam program
+              penurunan berat badan.
+            </p>
+            <a href="suplementasi_nutrisi.html" class="btn"
+              >Pelajari Lebih Lanjut</a
+            >
+          </div>
+        </div>
+        <div class="produk-card">
+          <img
+            src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/86/MTA-135035220/no_brand_herbasen_premium_green_tea_teh_hijau_organik_full03_g2aud1pn.jpg"
+            alt="Teh Diet C"
+          />
+          <div class="produk-content">
+            <h3>Teh Diet</h3>
+            <p>
+              Teh herbal yang membantu detoksifikasi tubuh dan meningkatkan
+              pencernaan. Dapat membantu dalam mengurangi berat badan secara
+              alami.
+            </p>
+            <a href="teh_diet.html" class="btn">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+        <div class="produk-card">
+          <img
+            src="https://down-id.img.susercontent.com/file/sg-11134201-22120-i7mts0ezdmkv15_tn.webp"
+            alt="Alat Olahraga D"
+          />
+          <div class="produk-content">
+            <h3>Alat Olahraga</h3>
+            <p>
+              Alat olahraga yang dirancang untuk membantu pembakaran kalori
+              lebih efektif dan mendukung penurunan berat badan yang sehat.
+            </p>
+            <a href="alat_olahraga.html" class="btn">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>@nutribot_innovators 2024. <a href="#">Hubungi Kami</a></p>
+    </footer>
+  </body>
+</html>

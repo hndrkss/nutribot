@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Deteksi Gula Darah</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(120deg, #e6f7e9, #2ecc71);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Background Animation */
+    .background-ai {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: moveBg 20s linear infinite;
+    }
+
+    @keyframes moveBg {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      color: rgb(0, 175, 96);
+      opacity: 0.9;
+      z-index: 10;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .navbar .logo img {
+      width: 70px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: rgb(0, 155, 85);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #45a247;
+    }
+
+    /* Features Section */
+    .features {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 50px 20px;
+      margin: 32px auto;
+      max-width: 70%;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #27ae60;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Container */
+    .form-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e6f7e9;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-group input::placeholder {
+      color: #aaa;
+    }
+
+    /* Button Styles */
+    button {
+      background-color: #27ae60;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a247;
+    }
+
+    /* Error Message */
+    .error-message {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* Result Container */
+    .result-container {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f8fdf9;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #27ae60;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #e6f7e9;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-ai"></div>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./asst/logo.png" alt="Logo" />
+        <h1>nutribot</h1>
+      </div>
+      <ul>
+        <li><a href="CAPSTONE.html">Beranda</a></li>
+        <li><a href="#">Deteksi Gula Darah</a></li>
+        <li><a href="history.html">Riwayat</a></li>
+        <li><a href="produk.html">Produk</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h1 style="text-align: center; margin-bottom: 40px;">Form Deteksi Overweight</h1>
+    <form id="formDeteksi">
+      <div class="form-group">
+        <label for="height">Tinggi Badan (Continuous Feature)</label>
+        <input type="number" id="height" placeholder="Masukkan tinggi badan Anda" required>
+      </div>
+      <div class="form-group">
+        <label for="weight">Berat Badan (Continuous Feature)</label>
+        <input type="number" id="weight" placeholder="Masukkan berat badan Anda" required>
+      </div>
+      <div class="form-group">
+        <label for="familyHistory">Apakah anggota keluarga Anda pernah menderita overweight?</label>
+        <select id="familyHistory" required>
+          <option value="">Pilih opsi</option>
+          <option value="yes">Ya</option>
+          <option value="no">Tidak</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="favc">Apakah Anda sering makan makanan tinggi kalori?</label>
+        <select id="favc" required>
+          <option value="">Pilih opsi</option>
+          <option value="yes">Ya</option>
+          <option value="no">Tidak</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fcvc">Apakah Anda biasanya makan sayuran? (Integer)</label>
+        <input type="number" id="fcvc" placeholder="Masukkan frekuensi" required>
+      </div>
+      <div class="form-group">
+        <label for="ncp">Berapa jumlah makan utama sehari-hari? (Continuous)</label>
+        <input type="number" id="ncp" placeholder="Masukkan jumlah" required>
+      </div>
+      <div class="form-group">
+        <label for="caec">Apakah Anda makan makanan di antara waktu makan utama?</label>
+        <select id="caec" required>
+          <option value="">Pilih opsi</option>
+          <option value="always">Selalu</option>
+          <option value="frequently">Sering</option>
+          <option value="sometimes">Kadang-kadang</option>
+          <option value="never">Tidak pernah</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="smoke">Apakah Anda merokok?</label>
+        <select id="smoke" required>
+          <option value="">Pilih opsi</option>
+          <option value="yes">Ya</option>
+          <option value="no">Tidak</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="ch2o">Berapa banyak air yang Anda minum sehari-hari? (Continuous)</label>
+        <input type="number" id="ch2o" placeholder="Masukkan jumlah" required>
+      </div>
+      <div class="form-group">
+        <label for="scc">Apakah Anda memantau asupan kalori Anda?</label>
+        <select id="scc" required>
+          <option value="">Pilih opsi</option>
+          <option value="yes">Ya</option>
+          <option value="no">Tidak</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="faf">Frekuensi aktivitas fisik (Continuous)</label>
+        <input type="number" id="faf" placeholder="Masukkan frekuensi" required>
+      </div>
+      <div class="form-group">
+        <label for="chd">Apakah Anda menderita penyakit kronis? (Binary)</label>
+        <select id="chd" required>
+          <option value="">Pilih opsi</option>
+          <option value="yes">Ya</option>
+          <option value="no">Tidak</option>
+        </select>
+      </div>
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="error-message" id="error-message"></div>
+    <div class="result-container" id="result-container"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 nutribot. Semua hak dilindungi.</p>
+    <p><a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat dan Ketentuan</a></p>
+  </footer>
+
+  <script src="formValidation.js"></script>
+</body>
+</html>

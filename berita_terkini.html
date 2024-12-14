@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berita Terkini - Nutribot Innovators</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(120deg, #e6f7e9, #d8ffe8);
+        color: #333;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        color: rgb(0, 175, 96);
+        opacity: 0.9;
+        z-index: 10;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .navbar .logo img {
+        width: 70px;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: rgb(0, 155, 85);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+        color: #45a247;
+      }
+
+      /* Main content styles */
+      main {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #27ae60;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .article-item {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .article-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .article-content {
+        padding: 20px;
+      }
+
+      .article-item h2 {
+        font-size: 1.3rem;
+        color: #27ae60;
+        margin-bottom: 10px;
+      }
+
+      .article-item .date {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .article-item p {
+        margin-bottom: 15px;
+      }
+
+      .article-item a {
+        display: inline-block;
+        background-color: #27ae60;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .article-item a:hover {
+        background-color: #219653;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar ul {
+          margin-top: 20px;
+        }
+
+        .navbar li {
+          margin: 10px 0;
+        }
+
+        .article-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./asst/logo.png" alt="Chatbot Illustration" />
+          <h1>nutribot</h1>
+        </div>
+        <ul>
+          <li><a href="CAPSTONE.html">Home</a></li>
+          <li><a href="#">Deteksi Gula Darah</a></li>
+          <li><a href="history.html">Riwayat</a></li>
+          <li><a href="produk.html">Produk</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="page-title">Berita Terkini</h1>
+      <div class="article-list">
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Wapres Gibran Minta Kurikulum Olahraga Diperbaiki demi Cegah Anak
+              Sekolah Obesitas
+            </h2>
+            <p class="date">Kamis, 05 Desember 2024 - 08:35:00 WIB</p>
+            <p><strong>Penulis:</strong> Binti Mufarida</p>
+            <a
+              href="https://www.inews.id/amp/news/nasional/wapres-gibran-minta-kurikulum-olahraga-diperbaiki-demi-cegah-anak-sekolah-obesitas"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>Obesitas jadi ancaman serius remaja Indonesia</h2>
+            <p class="date">22 Juli 2024 10:42 WIB</p>
+            <p><strong>Penulis:</strong> Hanni Sofia</p>
+            <a
+              href="https://m.antaranews.com/amp/berita/4208913/obesitas-jadi-ancaman-serius-remaja-indonesia"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Studi Terbaru: Paparan Polutan di Masa Bayi Terindikasi Turut
+              Memicu Epidemi Gangguan Metabolik seperti Obesitas dan Diabetes
+              Tipe 2
+            </h2>
+            <p class="date">17 Agustus 2024 | 13.48 WIB</p>
+            <a
+              href="https://www.tempo.co/sains/studi-terbaru-paparan-polutan-di-masa-bayi-terindikasi-turut-memicu-epidemi-gangguan-metabolik-seperti-obesitas-dan-diabetes-tipe-2-23073"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Galakkan Pola Hidup Sehat, Kementerian PANRB Gelar Seminar
+              Kesehatan
+            </h2>
+            <p class="date">27 Jun 2024</p>
+            <a
+              href="https://menpan.go.id/site/berita-terkini/galakan-pola-hidup-sehat-kementerian-panrb-gelar-seminar-kesehatan"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Banyak Remaja Terkena Obesitas karena Makan "Junk Food" Berlebihan
+            </h2>
+            <p class="date">30 Mei 2024, 16:00 WIB</p>
+            <a
+              href="https://lestari.kompas.com/read/2024/05/30/160000986/banyak-remaja-terkena-obesitas-karena-makan-junk-food-berlebihan?page=all"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Diabetes pada Anak Dipicu oleh Obesitas! Cegah dari Sekarang
+            </h2>
+            <p class="date">22 Agustus 2024</p>
+            <a
+              href="https://www.siloamhospitals.com/informasi-siloam/artikel/diabetes-pada-anak"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Penduduk Obesitas Anak di DKI meningkat, Bogor Depok juga
+              mengalami peningkatan
+            </h2>
+            <p class="date">07-Mar-2024</p>
+            <a
+              href="https://www.rspp.co.id/berita-detail-334-Penduduk-Obesitas-Anak-di-DKI-meningkat,-Bogor-Depok-juga-mengalami-peningkatan.html"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>Bahaya Obesitas Akibat Konsumsi Minuman Manis</h2>
+            <p class="date">29 Sep 2024</p>
+            <a
+              href="https://www.rri.co.id/kesehatan/1009383/bahaya-obesitas-akibat-konsumsi-minuman-manis"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>40 Persen Kasus Kanker di Amerika Disebabkan Obesitas</h2>
+            <p class="date">11 Oktober 2024 | 16.37 WIB</p>
+            <a
+              href="https://www.tempo.co/sains/40-persen-kasus-kanker-di-amerika-disebabkan-obesitas-1158877"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>Indonesia Bergulat Dengan Masalah Obesitas</h2>
+            <p class="date">04/03/2024</p>
+            <a
+              href="https://www.voaindonesia.com/amp/indonesia-bergulat-dengan-masalah-obesitas/7512548.html"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              TNI, Polri, PNS, dan Pegawai BUMN Jadi Profesi dengan Penderita
+              Obesitas Terbanyak di Indonesia
+            </h2>
+            <p class="date">15 Juli 2024, 18:30 WIB</p>
+            <a
+              href="https://amp.kompas.com/tren/read/2024/07/15/183000765/tni-polri-pns-dan-pegawai-bumn-jadi-profesi-dengan-penderita-obesitas"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>
+              Konsumsi minyak ikan oleh ayah bantu kurangi risiko anak obesitas
+            </h2>
+            <p class="date">3 Juli 2024 10:08 WIB</p>
+            <a
+              href="https://m.antaranews.com/amp/berita/4179141/konsumsi-minyak-ikan-oleh-ayah-bantu-kurangi-risiko-anak-obesitas"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-content">
+            <h2>Anak obesitas berisiko tinggi mengalami defisiensi zat besi</h2>
+            <p class="date">13 April 2024 10:25 WIB</p>
+            <a
+              href="https://m.antaranews.com/amp/berita/4056102/anak-obesitas-berisiko-tinggi-mengalami-defisiensi-zat-besi"
+              target="_blank"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Nutribot Innovators. All rights reserved. |
+        <a href="https://www.inews.id">iNews</a>
+      </p>
+    </footer>
+  </body>
+</html>

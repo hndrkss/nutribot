@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tips Kesehatan - Nutribot Innovators</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(120deg, #e6f7e9, #2ecc71);
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        color: rgb(0, 175, 96);
+        opacity: 0.9;
+        z-index: 10;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .navbar .logo img {
+        width: 70px;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin: 0 15px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: rgb(0, 155, 85);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+        color: #45a247;
+      }
+
+      /* Main content styles */
+      .main-content {
+        background-color: #fff;
+        padding: 40px;
+        margin: 40px auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+
+      .main-content h2 {
+        color: #27ae60;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .main-content h4 {
+        color: #27ae60;
+        font-size: 1.3rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      .main-content p,
+      .main-content ul {
+        margin-bottom: 20px;
+      }
+
+      .main-content a {
+        color: #27ae60;
+        text-decoration: none;
+      }
+
+      .main-content a:hover {
+        text-decoration: underline;
+      }
+
+      .img-container {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .img-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .img-container img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar ul {
+          margin-top: 20px;
+        }
+
+        .navbar li {
+          margin: 10px 0;
+        }
+
+        .main-content {
+          margin: 20px 10px;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./asst/logo.png" alt="Chatbot Illustration" />
+          <h1>nutribot</h1>
+        </div>
+        <ul>
+          <li><a href="CAPSTONE.html">Home</a></li>
+          <li><a href="#">Deteksi Gula Darah</a></li>
+          <li><a href="history.html">Riwayat</a></li>
+          <li><a href="produk.html">Produk</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h2>Risiko Obesitas</h2>
+
+      <div class="img-container">
+        <img
+          src="https://pbs.twimg.com/media/BnzP8nVCcAAK0O7.jpg:large"
+          alt="Ilustrasi Obesitas"
+          width="500"
+        />
+      </div>
+
+      <p>
+        Obesitas adalah suatu kelainan yang ditandai dengan adanya penimbunan
+        secara berlebihan jaringan lemak dalam tubuh. Hal ini dapat terjadi
+        karena adanya ketidakseimbangan antara energi yang masuk dengan energi
+        yang keluar. Obesitas menjadi masalah gizi yang belakangan muncul dengan
+        pesat di seluruh dunia.
+      </p>
+
+      <p>
+        Salah satu indikator penentuan status gizi yaitu menggunakan Indeks
+        Massa Tubuh (IMT). Adanya peningkatan IMT menyebabkan obesitas dapat
+        berkembang menjadi Penyakit Tidak Menular (PTM) seperti penyakit
+        kardiovaskuler, diabetes mellitus, hipertensi, dan lain-lain. Data dari
+        World Health Organization (WHO), saat ini 73% kematian yang terjadi di
+        Indonesia diakibatkan oleh PTM. Sehingga untuk mengurangi angka kejadian
+        PTM di Indonesia, perlu dilakukan upaya pencegahan kejadian obesitas.
+      </p>
+
+      <h4>Akar Penyebab Masalah Obesitas</h4>
+      <ol>
+        <li>
+          <strong>Lingkungan</strong>
+          <ul>
+            <li>
+              Orang cenderung menyepelekan apa yang dia makan, namun menaksir
+              terlalu tinggi (overestimate) apa yang dilakukan.
+            </li>
+            <li>
+              Peran orang tua dalam mengontrol penggunaan elektronik. Durasi
+              screen time yang berlebihan dapat meningkatkan risiko obesitas.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Pelayanan Kesehatan</strong>
+          <p>
+            Upaya-upaya dari pemerintah untuk memberikan informasi tentang upaya
+            pencegahan obesitas nampaknya memiliki banyak hambatan, termasuk
+            persepsi keseriusan masalah obesitas yang masih kurang.
+          </p>
+        </li>
+        <li>
+          <strong>Genetik</strong>
+          <ul>
+            <li>Usia: Metabolisme melambat seiring bertambahnya usia.</li>
+            <li>
+              Jenis kelamin: Wanita lebih rentan mengalami obesitas dibandingkan
+              pria.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Perilaku</strong>
+          <p>
+            Pola makan yang berlebih dapat menjadi faktor terjadinya obesitas.
+            Obesitas terjadi jika seseorang mengonsumsi kalori melebihi jumlah
+            kalori yang dibakar.
+          </p>
+        </li>
+      </ol>
+
+      <p>
+        Sumber:
+        <a
+          href="http://talenta.usu.ac.id/trophico/article/download/8657/4840/29343"
+          target="_blank"
+          >Talenta USU</a
+        >
+      </p>
+
+      <h4>
+        Faktor-faktor Risiko Penyebab Kelebihan Berat Badan dan Obesitas pada
+        Anak dan Remaja
+      </h4>
+      <ul>
+        <li>Sosioekonomi dan demografi</li>
+        <li>Pola dan kebiasaan makan</li>
+        <li>Aktivitas fisik dan gaya hidup</li>
+        <li>Pola asuh orang tua</li>
+        <li>
+          Faktor-faktor lainnya (obesitas pada orang tua, berat badan lahir,
+          lama menyusui, durasi tidur, dll.)
+        </li>
+      </ul>
+
+      <p>
+        Di Indonesia, prevalensi obesitas pada anak usia 5-12 tahun meningkat
+        dari 8,8% (Riskesdas, 2013) menjadi 9,2% (Riskesdas, 2018). Prevalensi
+        obesitas dan berat badan berlebih (overweight) pada remaja umur 16-18
+        tahun juga meningkat masing-masing dari 1,6% menjadi 4,0% dan 5,7%
+        menjadi 9,5%.
+      </p>
+
+      <h4>Pencegahan dan Penanganan Obesitas</h4>
+      <ul>
+        <li>Menjaga pola makan seimbang</li>
+        <li>Meningkatkan aktivitas fisik</li>
+        <li>Mengurangi waktu layar (screen time)</li>
+        <li>Memastikan kualitas tidur yang baik</li>
+        <li>Edukasi gizi dan kesehatan untuk keluarga</li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Tips Kesehatan - Nutribot Innovators. Semua Hak Dilindungi.
+        <a href="#">Hubungi Kami</a>
+      </p>
+    </footer>
+  </body>
+</html>

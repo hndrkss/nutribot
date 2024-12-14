@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suplementasi Nutrisi</title>
+    <style>
+      :root {
+        --primary-color: #27ae60;
+        --secondary-color: #2ecc71;
+        --background-color: #f0f8f0;
+        --text-color: #333;
+        --card-bg-color: #fff;
+        --accent-color: #e74c3c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        line-height: 1.6;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .back-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .produk-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .produk-card {
+        background-color: var(--card-bg-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .produk-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .produk-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .produk-content {
+        padding: 20px;
+      }
+
+      .produk-title {
+        font-size: 24px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .produk-description {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .btn-buy {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-buy:hover {
+        background-color: #c0392b;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #e6f7e9;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .produk-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <button class="back-btn" onclick="history.back()">←</button>
+        <h1>Rekomendasi Suplementasi Nutrisi</h1>
+        <div></div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="produk-grid">
+        <div class="produk-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqrkcPiapNNZCM4EcDyteSBEdAS1uA-UrezA&s"
+            alt="Fat Burner Xtreme"
+            class="produk-image"
+          />
+          <div class="produk-content">
+            <h2 class="produk-title">
+              Dymatize Nutrition Dymaburn xtreme fatburner ecer
+            </h2>
+            <p class="produk-description">
+              Suplemen pembakar lemak ini dirancang untuk membantu mengurangi
+              lemak di area tubuh seperti perut, lengan, dan paha dengan
+              meningkatkan metabolisme dan mempercepat pembakaran kalori. Selain
+              itu, suplemen ini juga meningkatkan energi saat latihan,
+              memungkinkan Anda untuk berolahraga lebih intens dan efektif.
+            </p>
+            <a
+              href="https://tokopedia.link/EpPd6Je12Ob"
+              class="btn-buy"
+              target="_blank"
+              >Beli Sekarang</a
+            >
+          </div>
+        </div>
+
+        <div class="produk-card">
+          <img
+            src="https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/24/ca99e737-a3af-47d7-83ca-98b41c6f835a.jpg"
+            alt="Organic Protein Powder"
+            class="produk-image"
+          />
+          <div class="produk-content">
+            <h2 class="produk-title">Organic Protein Powder</h2>
+            <p class="produk-description">
+              Organic Protein Powder adalah suplemen protein yang terbuat dari
+              bahan-bahan organik, seperti kacang polong, beras merah, whey dari
+              susu organik, atau tanaman hemp, yang ditanam tanpa pestisida atau
+              bahan kimia sintetis. Suplemen ini menawarkan banyak manfaat,
+              seperti membantu membangun otot, mempercepat pemulihan, mendukung
+              penurunan berat badan, serta meningkatkan kesehatan pencernaan dan
+              sistem imun.
+            </p>
+            <a
+              href="https://www.tokopedia.com/rekomendasi/2101905128"
+              class="btn-buy"
+              target="_blank"
+              >Beli Sekarang</a
+            >
+          </div>
+        </div>
+
+        <div class="produk-card">
+          <img
+            src="https://down-id.img.susercontent.com/file/85e149e449777a3eb83d1a8981e1c195@resize_w450_nl.webp"
+            alt="Thermolyte Plus"
+            class="produk-image"
+          />
+          <div class="produk-content">
+            <h2 class="produk-title">Thermolyte Plus</h2>
+            <p class="produk-description">
+              Thermolyte Plus adalah suplemen pelangsing yang menggabungkan
+              ekstrak tumbuhan alami, vitamin, mineral, dan asam amino untuk
+              membantu menurunkan berat badan dengan cara membakar lemak,
+              mengurangi nafsu makan, menghambat penyerapan lemak, serta
+              mengencangkan tubuh. Dengan mekanisme kerja 4 in 1, produk ini
+              efektif mengurangi kadar lemak tubuh, meningkatkan energi tanpa
+              menyebabkan rasa lemas, dan menjaga kulit tetap kencang setelah
+              proses penurunan lemak.
+            </p>
+            <a
+              href="https://shopee.co.id/Thermolyte-Plus-10-Kaplet-Suplemen-Vitamin-Obesitas-Diet-Berat-Badan-Promo-Diskon-i.721269287.16830703111"
+              class="btn-buy"
+              target="_blank"
+              >Beli Sekarang</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>@nutribot_innovators 2024. <a href="#">Hubungi Kami</a></p>
+    </footer>
+  </body>
+</html>
